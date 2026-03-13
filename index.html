@@ -12,7 +12,7 @@
         <img src="img/logo.png" alt="logo" class="rounded mx-auto d-block" style="max-width: 100%;">
         <hr class="container">
     </div>
-    <div id="carouselExample" class="carousel slide mt-5 mb-5">
+    <div id="carouselExample" class="carousel slide mt-5 mb-5" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner text-center">
         <div class="carousel-item active">
           <figure class="figure">
@@ -32,7 +32,6 @@
             <figcaption class="figure-caption text-end">Tela de Execução.</figcaption>
           </figure>
         </div>
-
         <div class="carousel-item">
           <figure class="figure">
             <img src="img/finalizacao_page.png" class="figure-img img-fluid rounded" alt="imagem do aplicativo">
@@ -50,14 +49,14 @@
       </button>
     </div>
     <div class="mt-5">
-        <legend class="text-center mt-5 mb-5">Informações do Aplicativo</legend>
+        <h2 class="text-center mt-5 mb-5">Informações do Aplicativo</h2>
     </div>
     <div class="card container">
       <div class="card-header">
        #1 O que ele faz?
       </div>
       <div class="card-body">
-        <p class="card-text">O aplicativo atualiza todos os cadastros domiciliares da área a partir dos dados inseridos, mantém o chefe de família e atualiza o questionário individual de todos os membros.</p>
+        <p class="card-text">O aplicativo atualiza todos os cadastros domiciliares da área com base nos dados inseridos, mantém o chefe de família e atualiza o questionário individual de todos os membros.</p>
       </div>
     </div>
     <div class="card container mt-5">
@@ -65,7 +64,7 @@
        #2 Observação
       </div>
       <div class="card-body">
-        <p class="card-text">O aplicativo deve ser executado somente após atualização dos dados do profissional como: CBO do profissional, CBO do profissional na unidade de saúde, área profissional e micro área.</p>
+        <p class="card-text">O aplicativo deve ser executado somente após a atualização dos dados do profissional, como: CBO do profissional, CBO na unidade de saúde, área profissional e microárea.</p>
       </div>
     </div>
     <div class="card container mt-5">
@@ -73,15 +72,17 @@
        #3 Como utilizar?
       </div>
       <div class="card-body">
-        <p class="card-text">Adicione a url da base VIVVER desejada e faça login com o seu usuário e senha. Em seguida adicione os dados: Código do Município, Código da Unidade, Código da área, Código INE, Código da micro área, Código do CBO e código do profissional.</p>
+        <p class="card-text">Adicione a URL da base VIVVER desejada e faça login com seu usuário e senha. Em seguida, informe os seguintes dados: Código do Município, Código da Unidade, Código da Área, Código INE, Código da Microárea, Código do CBO e Código do Profissional.</p>
       </div>
     </div>
     <div class="card container mt-5">
       <div class="card-header">
-       #4 Como ele executa?
+       #4 Como ele funciona?
       </div>
       <div class="card-body">
-        <p class="card-text">O app busca todos os domicílios pelo Município, área e micro área informada. Em cada domicílio é feito a leitura de membros e do chefe, posteriormente atualiza o cabeçalho do cadastro domiciliar e cadastro individual dos membros pelo Código de profissional, Código de CBO e Código INE, mantém o chefe de família e pode ser parado a qualquer momento. Ao concluir as atualizações ou ser parado é gerado um relatório com status de resposta de cada execução sendo "atualizado" ou "erro".
+        <p class="card-text">O aplicativo busca todos os domicílios pelo município, área e microárea informados. Em cada domicílio é feita a leitura dos membros e do chefe da família.
+        Posteriormente, o sistema atualiza o cabeçalho do cadastro domiciliar e o cadastro individual dos membros utilizando o Código do Profissional, Código do CBO e Código INE, mantendo o chefe da família.
+        A execução pode ser interrompida a qualquer momento. Ao concluir as atualizações ou ao ser interrompido, é gerado um relatório com o status de cada execução, podendo ser "atualizado" ou "erro".
         </p>
       </div>
     </div>
@@ -90,12 +91,12 @@
        #5 Atenção!
       </div>
       <div class="card-body">
-        <p class="card-text">O aplicativo não insere ou modifica nenhuma outra informação do cadastro domiciliar ou cadastro individual, atualiza somente os cabeçalhos e mantém o chefe de família.
+        <p class="card-text">O aplicativo não insere nem modifica nenhuma outra informação do cadastro domiciliar ou do cadastro individual. Ele atualiza somente os cabeçalhos e mantém o chefe da família.
         </p>
         <ul class="list-group">
-          <li class="list-group-item list-group-item-danger">Se a base VIVVER inserida apresentar queda ou lentidão retornará "erro" no status da execução.</li>
-          <li class="list-group-item list-group-item-danger">Se o domicílo possuir membros e não ter chefe de família retornará "erro" no status da execução.</li>
-          <li class="list-group-item list-group-item-danger">Se o domicílio possuir alguma pendência de informação obrigatória retornará "erro" no status da execução.</li>
+          <li class="list-group-item list-group-item-danger">Se a base VIVVER informada apresentar queda ou lentidão, será retornado "erro" no status da execução.</li>
+          <li class="list-group-item list-group-item-danger">Se o domicílio possuir membros e não tiver um chefe de família definido, o status da execução retornará "erro".</li>
+          <li class="list-group-item list-group-item-danger">Se o domicílio possuir alguma pendência de informação obrigatória, retornará "erro" no status da execução.</li>
         </ul>
       </div>
     </div>
@@ -107,13 +108,27 @@
         <p class="card-text">Testado e executado nos municípios:
         </p>
         <ul class="list-group">
-          <li class="list-group-item list-group-item-success">Jequié - BA</li>
-          <li class="list-group-item list-group-item-success">Montes Claros - MG</li>
-          <li class="list-group-item list-group-item-success">+ de 400 atualizações para o CBO (322255 - Técnico em agente comunitário de saúde)</li>
+          <li class="list-group-item list-group-item-success">Jequié - BA (v26.01.07)</li>
+          <li class="list-group-item list-group-item-success">Montes Claros - MG (v26.02.04.04)</li>
         </ul>
-        <a href="aplicativo/atualizar_domicilios.exe" download="atualizar_domicilios.exe" class="btn btn-primary download-btn mt-3">
+        <div class="card shadow p-4 text-center mt-3">
+            <h3>
+                <span class="badge bg-success fs-3">
+                    +400
+                </span>
+            </h3>
+
+            <p class="mt-3 fs-5">
+                Atualizações realizadas para o CBO <strong>322255</strong>
+            </p>
+
+            <p class="text-muted">
+                Técnico em Agente Comunitário de Saúde
+            </p>
+            <a href="aplicativo/atualizar_domicilios.exe" download="atualizar_domicilios.exe" class="btn btn-primary download-btn mt-3 btn-lg">
             Download
-        </a>
+            </a>
+        </div>
       </div>
     </div>
     <hr class="container mt-5">
